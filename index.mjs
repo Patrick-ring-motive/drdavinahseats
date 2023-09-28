@@ -1,18 +1,15 @@
-/** 
-<style>
-*{color:green;}
-</style>
-
-
-
-*/
 import fetch from 'node-fetch';
 import http from 'http';
 import { addCorsHeaders } from './modules/cors-headers.mjs';
 import { normalizeRequest, mapResHeaders, applyResponse } from './modules/http-fetch.mjs';
 import { serverRequestResponse } from './server.mjs';
 
+const rootFallback=`
+<style>
+*{color:green;}
 
+</style>
+`;
 
 
 http.createServer(onRequest).listen(3000);
