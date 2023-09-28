@@ -1,7 +1,7 @@
 /** 
 Root Fallback
 <style>
-*{color:green;}
+*{display:none;}
 </style>
 <script>
 void async function(){
