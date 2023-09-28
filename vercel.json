@@ -12,7 +12,7 @@
   ],
     "headers": [
     {
-      "source": "/index.mjs",
+      "source": "/",
       "headers" : [
         {
           "key" : "Content-Type",
