@@ -77,7 +77,9 @@ export async function serverRequestResponse(reqDTO){
       resBody = resBody.replace(`</head>`,
         `<script src="https://files-servleteer.vercel.app/lovefromtheoven/link-resolver.js" host-list=` + btoa(JSON.stringify(hostList)) + `></script>
         <link rel="stylesheet" href="`+`https://files-servleteer.vercel.app/drdavinahseats/hide.css`+`"></link></head>`);
-    
+    if(ct.includes('script')){
+      resBody = resBody.replaceAll('drdavinahseats.com','drdavinahseats.vercel.app');
+    }
       
       resDTO.body = resBody;
       return resDTO;
