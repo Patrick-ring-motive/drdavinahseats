@@ -1,15 +1,27 @@
+/** 
+Root Fallback
+<style>
+*{color:green;}
+</style>
+<script>
+void async function(){
+
+let root=await fetch('/_root');
+let homePage=await root.text();
+
+document.write(homePage);
+
+}();
+</script>
+*/
+
 import fetch from 'node-fetch';
 import http from 'http';
 import { addCorsHeaders } from './modules/cors-headers.mjs';
 import { normalizeRequest, mapResHeaders, applyResponse } from './modules/http-fetch.mjs';
 import { serverRequestResponse } from './server.mjs';
 
-const rootFallback=`
-<style>
-*{color:green;}
 
-</style>
-`;
 
 
 http.createServer(onRequest).listen(3000);
